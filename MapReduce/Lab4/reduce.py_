@@ -1,0 +1,14 @@
+import sys
+
+for line in sys.stdin:
+    line = line.strip()
+
+    if not line:
+        continue
+
+    parts = line.split("***")
+
+    score = float(parts[0])
+    course_id = parts[3]
+
+    print "%s\t%s\t%s\t1" % (course_id, score, score*score)
